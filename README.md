@@ -13,32 +13,15 @@ The workflow operates in a continuous loop:
 4.  **Persistence**: The `db_change` function is invoked to insert a record into the `file_change` table in MySQL.
 5.  **Update**: The baseline hash is updated to the new hash to prepare for the next monitoring cycle.
 
-```mermaid
-graph TD
-    subgraph "Local Environment"
-        A["main_file.py (Logic Engine)"] -->|"Reads/Hashes"| B["info.txt (Target File)"]
-        A -->|"Imports Credentials"| C["db_config.py"]
-    end
-
-    subgraph "Data Layer"
-        D[("MySQL Database")]
-        E["file_sql.sql (Schema)"] -.->|"Initializes"| D
-        A -->|"Logs 'MODIFIED' event"| D
-    end
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-```
 
 ## 3. Repository Structure
 
-```shell
 FIM-File-Integrity-Manager-/
 ├── db_config.py
 ├── file_sql.sql
 ├── info.txt
 └── main_file.py
-```
+
 
 ## 4. Other important information
 
