@@ -2,7 +2,7 @@ This repository, **FIM-File-Integrity-Manager-**, is a Python-based utility desi
 
 The system works by calculating a cryptographic hash (SHA-256) of a target file and periodically re-calculating it to check for discrepancies. If the file's content changes, the script detects the mismatch and logs the event—including the previous hash, the new hash, and a timestamp—into a MySQL database for historical tracking. This provides a digital "paper trail" of file modifications.
 
-## 2. How all main components connect
+## 1. How all main components connect
 
 The architecture follows a classic "Monitor-and-Log" pattern. The core logic resides in `main_file.py`, which acts as the orchestrator. It consumes configuration data from `db_config.py` to establish a connection with a MySQL instance. The database schema, defined in `file_sql.sql`, must be initialized beforehand to provide the storage layer for change events.
 
