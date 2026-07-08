@@ -16,11 +16,13 @@ The workflow operates in a continuous loop:
 
 ## 3. Repository Structure
 
+```text
 FIM-File-Integrity-Manager-/
 ├── db_config.py
 ├── file_sql.sql
 ├── info.txt
 └── main_file.py
+```
 
 
 ## 4. Other important information
