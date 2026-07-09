@@ -14,7 +14,7 @@ The workflow operates in a continuous loop:
 5.  **Update**: The baseline hash is updated to the new hash to prepare for the next monitoring cycle.
 
 
-## 3. Repository Structure
+## 2. Repository Structure
 
 ```text
 FIM-File-Integrity-Manager-/
@@ -25,7 +25,7 @@ FIM-File-Integrity-Manager-/
 ```
 
 
-## 4. Other important information
+## 3. Other important information
 
 ### Tech Stack
 *   **Language**: Python 3.x
